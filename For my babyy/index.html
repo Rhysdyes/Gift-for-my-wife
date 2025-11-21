@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>for my baby</title>
+
+</head>
+<body>
+  <audio id="bgm" src="hh.mp3" loop></audio>
+
+<script>
+  document.addEventListener("click", () => {
+    document.getElementById("bgm").play();
+  });
+</script>
+
+
+
+  <div class="message-container" id="message"></div>
+  <div class="love-particles" id="hearts"></div>
+
+  <script>
+    const messages = [
+      "HAII MY BABYY!!!",
+      "Guess whatt!!!!???",
+      "it's November 26th, and what does that mean??",
+      "it's been 3 months since we became official!! >.< (again)",
+      "i made this just for you",
+      "hehe it's a bit messy but i hope you will like it",
+      "with that, i have a couple of letters i want you to read",
+      "first off all, i wanna say thank you for being a wonderful girlfriend",
+      "thank you for being so patient with me, we've gone through so much together",
+      "and you've forgiven me so much",
+      "thank you for still staying by my side",
+      "even in the hardest times, you stayed",
+      "i hope we always choose each other",
+      "i hope i can be someone worth sticking with",
+      "you’re the moon to my sun",
+      "i miss you more than i say",
+      "do you remember the day we started this journey? that moment changed everything for me", 
+      "even with the distance, my love for you only grows stronger",
+      "i’m so grateful we’re still here, together",
+      "i want to see your dreams come true (if ykyk hehe)",
+      "i want to support you forever",
+      "even though we’re apart, every moment with you feels warm",
+      "your voice, your laugh, your smile, all makes me feel like you’re right here",
+      "i’ll keep walking this path with you until distance no longer exists",
+      "i couldn’t be more thankful. i hope our love keeps growing stronger, wiser, and brings out the best in both of us.",
+      "you make me want to be better",
+      "i always look forward to your voice",
+      "i’m so so proud of you every day",
+      "thank you for the silly moments",
+      "thank you for being gentle with me",
+      "you matter more than distance",
+      "i want to grow old with you",
+      "few more years, forever to go",
+      "you’re not just my girlfriend—you’re my future wife <3",
+      "one day, we’ll celebrate this day without distance, in each other’s arms",
+      "i love you sooososoo much, now and always",
+      "thank you for being raisha felicia ramadhania"
+    ];
+
+    let index = 0;
+    const messageElement = document.getElementById("message");
+
+    function showMessage() {
+      messageElement.textContent = messages[index];
+      index = (index + 1) % messages.length;
+    }
+
+    setInterval(showMessage, 5911);
+    showMessage();
+
+   
+    const heartsContainer = document.getElementById('hearts');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 6 + Math.random() * 4 + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
